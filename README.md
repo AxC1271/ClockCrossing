@@ -5,7 +5,6 @@ This GitHub repository explores the concept of clock domain crossing using diffe
 asychronous FIFOs and handshaking. Each subdirectory will come with a schematic of the synchronizer, block diagrams Verilog code, physical
 layout on Magic VLSI, and SPICE directives that can capture parasitics and be simulated on ngspice. This repo not only aims
 to explain the process as a way to teach myself but also provide educational content to a reader interested in knowing about clock domain crossing.
-I hope you find this repository helpful!
 
 ## A Critical Problem in Digital Circuit Design
 
@@ -22,3 +21,7 @@ I hope you find this repository helpful!
 ### Handshaking
 
 ## Why do I need to know this?
+
+---
+
+I hope you find this repository helpful!
