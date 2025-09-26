@@ -16,6 +16,10 @@ to explain the process as a way to teach myself but also provide educational con
 
 ### Multiplexer Synchronizers (Mux Recirculation)
 
+### Pulse Synchronizers
+
+### Gray Code Counters
+
 ### Asynchronous FIFOs
 
 ### Handshaking
