@@ -1,4 +1,4 @@
-# Clock Domain Crossing Techniques
+# Metastable: Clock Domain Crossing Simplified
 
 ## Abstract
 This GitHub repository explores the concept of clock domain crossing using different techniques, from multi-flop synchronizers to 
