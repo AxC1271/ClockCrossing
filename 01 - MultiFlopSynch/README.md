@@ -5,6 +5,9 @@
 ## Circuit Schematic
 
 ## Verilog Implementation (Behavioral)
+
+Here's the HDL implementation of the double flop synchronizer using Verilog:
+
 ```Verilog
 `timescale 1ns / 1ps
 
