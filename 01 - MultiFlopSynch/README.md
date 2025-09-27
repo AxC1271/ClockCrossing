@@ -12,7 +12,7 @@ can reduce the effect of them.
 
 ## Verilog Implementation (Behavioral)
 
-Here's the HDL implementation of the double flop synchronizer using Verilog:
+Here's the HDL implementation of a double flop synchronizer using Verilog:
 
 ```Verilog
 `timescale 1ns / 1ps
