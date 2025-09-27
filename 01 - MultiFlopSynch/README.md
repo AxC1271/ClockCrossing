@@ -1,6 +1,7 @@
 # Multi-Flop Synchronizers
 
 ## Preface
+Multi-flop synchronizers are the most common approach to addressing metastability in clock domain crossings. The 
 
 ## Circuit Schematic
 
@@ -39,4 +40,6 @@ module multi_flop_sync (
 
 endmodule
 ```
+## Testbench 
+
 ## Simulation Waveform
