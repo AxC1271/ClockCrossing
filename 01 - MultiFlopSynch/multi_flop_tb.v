@@ -6,7 +6,7 @@
 // 
 // Create Date: 09/28/2025 07:21:13 PM
 // Design Name: Multi Flop Synchronizer Testbench
-// Module Name: multi_flop_sync_tb
+// Module Name: multi_flop_tb
 // Project Name: Metastable Github Educational Demo
 // Target Devices: 
 // Tool Versions: Xilinx Vivado 2024.2
@@ -20,14 +20,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module tb_multi_flop_sync();
+module multi_flop_tb();
     reg async_data;
     reg dst_clk;
     reg rst_n;
     wire sync_data;
 
     // instantiate the unit under test
-    multi_flop_sync uut (
+    multi_flop uut (
         .async_data(async_data),
         .dst_clk(dst_clk),
         .rst_n(rst_n),
