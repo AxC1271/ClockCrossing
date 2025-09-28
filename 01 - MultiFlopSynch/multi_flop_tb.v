@@ -1,6 +1,26 @@
 `timescale 1ns/1ps
 
-module tb_multi_flop_sync;
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: Andrew Chen
+// 
+// Create Date: 09/28/2025 07:21:13 PM
+// Design Name: Multi Flop Synchronizer Testbench
+// Module Name: multi_flop_sync_tb
+// Project Name: Metastable Github Educational Demo
+// Target Devices: 
+// Tool Versions: Xilinx Vivado 2024.2
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+module tb_multi_flop_sync();
     reg async_data;
     reg dst_clk;
     reg rst_n;
