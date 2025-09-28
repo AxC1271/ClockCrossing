@@ -52,6 +52,12 @@ endmodule
 
 ## Simulation Waveform
 
+### Magic VLSI Physical Layout
+
+### SPICE Directive
+
+### SPICE Simulation (ngspice)
+
 ## Advantages/Disadvantages
 A multi-flop synchronizer sounds like an easy solution to solving metastability issues; adding an additional flop to the end of the first flop statistically allows for enough time for the metastable signal to settle before being sampled again by the second flip flop, only requiring an additional clock cycle. It's very simple to implement, very inexpensive in FPGA fabric (due to only using 2 flip flops), and has predictable latency. However, there are drawbacks as well:
 - Only works for single bits; in multi-bit buses different bits may resolve at different times, which could lead to race conditions. Usually a different technique like handshaking is used instead.
