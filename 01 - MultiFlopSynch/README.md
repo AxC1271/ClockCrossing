@@ -6,7 +6,7 @@ two (sometimes more) D flip-flops to chain the asynchronous input and synchroniz
 with asynchronous inputs is that it could come at any time; this is fundamentally problematic if a change in the asynchronous input
 happens within the setup or hold time of a D flip-flop. When this happens, the output of the D flip-flop can be unpredictable, leading
 to failure in larger integrated systems. We cannot prevent an asynchronous input from being sampled within the setup/hold time, but we 
-can reduce the effect of them.
+can reduce the effect of them by allowing the metastable signal to resolve itself before we sample and use it.
 
 ## Circuit Schematic
 <p align="center">
