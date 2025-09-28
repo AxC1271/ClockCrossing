@@ -53,6 +53,9 @@ module multi_flop_sync (
 endmodule
 ```
 ## Testbench 
+We're using a testbench with random signals to verify for correctness:
+```Verilog
+```
 
 ## Simulation Waveform
 
