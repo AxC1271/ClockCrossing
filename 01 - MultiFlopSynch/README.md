@@ -9,6 +9,9 @@ to failure in larger integrated systems. We cannot prevent an asynchronous input
 can reduce the effect of them.
 
 ## Circuit Schematic
+<p align="center">
+    <img src="./FlopSynchronizerSchematic.png" />
+</p>
 
 ## Verilog Implementation (Behavioral)
 
