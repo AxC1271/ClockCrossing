@@ -5,7 +5,7 @@
 // 
 // Create Date: 09/27/2025 05:43:01 PM
 // Design Name: Multi Flop Synchronizer
-// Module Name: multi_flop_sync
+// Module Name: multi_flop
 // Project Name: Metastable Github Educational Demo
 // Target Devices: 
 // Tool Versions: Xilinx Vivado 2024.2
@@ -21,7 +21,7 @@
 
 // creating a simple two flop synchronizer
 
-module multi_flop_sync (
+module multi_flop (
     input  wire async_data,    // asynchronous input
     input  wire dst_clk,       // destination clock domain
     input  wire rst_n,         // active low rst     
