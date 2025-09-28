@@ -1,6 +1,6 @@
 # Multi-Flop Synchronizers
 
-## Preface
+### Preface
 Multi-flop synchronizers are the most common approach to addressing metastability in clock domain crossings. The premise is to use
 two (sometimes more) D flip-flops to chain the asynchronous input and synchronize it to the new clock domain. The inherent issue 
 with asynchronous inputs is that it could come at any time; this is fundamentally problematic if a change in the asynchronous input
@@ -8,9 +8,9 @@ happens within the setup or hold time of a D flip-flop. When this happens, the o
 to failure in larger integrated systems. We cannot prevent an asynchronous input from being sampled within the setup/hold time, but we 
 can reduce the effect of them.
 
-## Circuit Schematic
+### Circuit Schematic
 
-## Verilog Implementation (Behavioral)
+### Verilog Implementation (Behavioral)
 
 Here's the HDL implementation of a double flop synchronizer using Verilog:
 
@@ -45,8 +45,8 @@ module multi_flop_sync (
 
 endmodule
 ```
-## Testbench 
+### Testbench 
 
-## Simulation Waveform
+### Simulation Waveform
 
-## Drawbacks
+### Drawbacks
