@@ -13,6 +13,10 @@ can reduce the effect of them by allowing the metastable signal to resolve itsel
     <img src="./TwoFlopSynch.png" />
 </p>
 
+The first flip flop is run on some source clock, whereas the last two flip flops are clocked using the destination clock. Output Q from
+the first flip flop is sampled onto the first flop, where it could run the risk of metastability. It takes at least two clock cycles for the
+metastable signal to propagate to the second flop, which should be resolved by then.
+
 ## Verilog Implementation (Behavioral)
 
 Here's the HDL implementation of a double flop synchronizer using Verilog:
