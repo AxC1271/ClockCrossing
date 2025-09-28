@@ -56,6 +56,7 @@ endmodule
 Here we first implement the D-latch in Magic in order to create our two flip-flops. Since we are using a positively edge triggered flip flop the master D flip-flop should be transparent when clock is low and we want the slave D flip-flop to be opaque when clock is high (reversing these two gets a negatively edge triggered flip flop. For those who don't know why, drawing the waveforms from the two D-latches is a simple but intuitive exercise). 
 <p align="center">
     <img src="./DLatchLayout.png" />
+    <figcaption>Physical layout of D-latch.</figcaption>
 </p>
 
 ### SPICE Directive
