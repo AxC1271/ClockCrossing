@@ -110,7 +110,7 @@ Here we first implement the D-latch in Magic in order to create our two flip-flo
 <p align="center">
     <img src="./DLatchLayout.png" />
     <br>
-    <em>Figure 1: Layout of an SR latch with NAND gates.</em>
+    <em>Figure 1: Layout of a D latch with NAND gates.</em>
 </p>
 
 ### SPICE Directive
