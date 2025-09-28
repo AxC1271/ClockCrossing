@@ -10,7 +10,7 @@ can reduce the effect of them.
 
 ## Circuit Schematic
 <p align="center">
-    <img src="./FlopSynchronizerSchematic.png" />
+    <img src="./TwoFlopSynch.png" />
 </p>
 
 ## Verilog Implementation (Behavioral)
