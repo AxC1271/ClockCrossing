@@ -1,5 +1,9 @@
 * SPICE3 file created from /home/parallels/Documents/vlsi_layouts/memory/d_latch/d_latch.ext - technology: scmos
 
+.include ./ami05.txt
+
+Vdd Vpower gnd 3.3
+
 .option scale=0.3u
 
 M1000 nand_gate_0/vdd en nand_gate_2/A nand_gate_0/w_n6_n6# pfet w=8 l=3
@@ -51,3 +55,14 @@ C13 nand_gate_1/w_n6_n6# Gnd 3.89fF
 C14 nand_gate_0/gnd Gnd 2.39fF
 C15 nand_gate_0/vdd Gnd 3.13fF
 C16 nand_gate_0/w_n6_n6# Gnd 3.89fF
+
+Vin_d d 0 PULSE(0 1.8 1n 0.1n 0.1n 10n 20n)
+Vin_en en 0 PULSE(0 1.8 0n 0.1n 0.1n 40n 80n)
+
+.tran 0.1n 200n
+.control
+run
+plot d en Q Q_not
+.endc
+
+.end
