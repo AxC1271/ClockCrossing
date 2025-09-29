@@ -26,7 +26,7 @@ Here's the HDL implementation of a double flop synchronizer using Verilog:
 
 // creating a simple two flop synchronizer
 
-module multi_flop_sync (
+module multi_flop (
     input  wire async_data,    // asynchronous input
     input  wire dst_clk,       // destination clock domain
     input  wire rst_n,         // active low rst     
@@ -57,14 +57,14 @@ We're using a testbench with random signals to verify for correctness and see if
 ```Verilog
 `timescale 1ns/1ps
 
-module tb_multi_flop_sync();
+module tb_multi_flop();
     reg async_data;
     reg dst_clk;
     reg rst_n;
     wire sync_data;
 
     // instantiate the unit under test
-    multi_flop_sync uut (
+    multi_flop uut (
         .async_data(async_data),
         .dst_clk(dst_clk),
         .rst_n(rst_n),
