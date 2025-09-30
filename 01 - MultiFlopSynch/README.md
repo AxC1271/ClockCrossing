@@ -147,13 +147,28 @@ By extension we can now create a positive edge-triggered D flip-flop using two o
 
 Here's the SPICE level simulation of that layout using this SPICE directive:
 ```SPICE
+* input signals, D is high for the first half then low
+Vin_d d_latch_0/d 0 PULSE(3.3 0 200n 0.1n 0.1n 200n 1000n)
+Vin_clk clk 0 PULSE(0 3.3 0n 0.1n 0.1n 40n 80n)
 
+* transient simulation
+.tran 0.1n 400n
+
+.control
+run
+plot clk
+plot v(d_latch_0/d) 
+plot v(d_latch_1/q) 
+plot v(d_latch_1/q_not) 
+.endc
+
+.end
 ```
-
+Here's the waveform to see the flip flop output being driven by the edge of the clock, not the logic level.
 <p align="center">
     <img src="./DFFSimulation.png" />
     <br>
-    <em>These waveforms are beautiful.</em>
+    <em>These waveforms are beautiful. 😍</em>
 </p>
 
 ### Metastability of D flip-flop
