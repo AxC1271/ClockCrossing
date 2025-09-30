@@ -114,7 +114,7 @@ Here we first implement the D-latch in Magic in order to create our two flip-flo
 </p>
 
 ### SPICE Directive/Simulations (ngspice)
-First we will create the SPICE directive of the D-latch and verify that it works.
+First we will create the SPICE directive of the D-latch and verify that it works. Quick note: the specific CMOS technology I'm using in Magic is the AMI 0.5µm CMOS node.
 ```SPICE
 Vin_d d 0 PULSE(0 3.3 1n 0.1n 0.1n 10n 20n)
 Vin_en en 0 PULSE(0 3.3 0n 0.1n 0.1n 40n 80n)
