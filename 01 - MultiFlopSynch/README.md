@@ -113,9 +113,28 @@ Here we first implement the D-latch in Magic in order to create our two flip-flo
     <em>Figure 1: Layout of a D latch with NAND gates.</em>
 </p>
 
-### SPICE Directive
+### SPICE Directive/Simulations (ngspice)
+First we will create the SPICE directive of the D-latch and verify that it works.
+```SPICE
+Vin_d d 0 PULSE(0 3.3 1n 0.1n 0.1n 10n 20n)
+Vin_en en 0 PULSE(0 3.3 0n 0.1n 0.1n 40n 80n)
 
-### SPICE Simulation (ngspice)
+.tran 0.1n 200n
+.control
+run
+plot d
+plot en
+plot Q
+plot Q_not
+.endc
+
+.end
+```
+<p align="center">
+    <img src="./DLatchSimulation.png" />
+</p>
+
+### Metastability of D flip-flop
 
 ## Advantages/Disadvantages
 A multi-flop synchronizer sounds like an easy solution to solving metastability issues; adding an additional flop to the end of the first flop statistically allows for enough time for the metastable signal to settle before being sampled again by the second flip flop, only requiring an additional clock cycle. It's very simple to implement, very inexpensive in FPGA fabric (due to only using 2 flip flops), and has predictable latency. However, there are drawbacks as well:
