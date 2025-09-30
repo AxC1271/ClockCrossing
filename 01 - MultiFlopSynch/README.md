@@ -152,7 +152,10 @@ plot v(d_latch_1/q) xlimit 90n 130n
 Here's the waveform when setup time is not violated (>= 0.78ns):
 <p align="center">
     <img src="./GoodWaveform.png" />
-    <em>Q is sampled correctly with the input D as D changes before the rising edge of the clock.</em>
+    <em>
+        Q is sampled correctly with the input D as D changes before the rising edge of the clock.
+        Admittedly it is a bit sharp of a curve but the output stays above 3V.
+    </em>
 </p>
 
 Here's the waveform when setup time **is** violated (< 0.78ns):
