@@ -147,9 +147,11 @@ By extension we can now create a positive edge-triggered D flip-flop using two o
 
 Here's the SPICE level simulation of that layout using this SPICE directive:
 ```SPICE
-* input signals, D is high for the first half then low
-Vin_d d_latch_0/d 0 PULSE(3.3 0 200n 0.1n 0.1n 200n 1000n)
-Vin_clk clk 0 PULSE(0 3.3 0n 0.1n 0.1n 40n 80n)
+* clock: 3 pulses, 150ns period, 60ns high / 90ns low
+Vin_clk clk 0 PULSE(0 3.3 0n 0.1n 0.1n 60n 150n)
+
+* d starts HIGH, then goes LOW at 30ns (while clock is HIGH!)
+Vin_d d_latch_0/d 0 PULSE(3.3 0 30n 0.1n 0.1n 400n 1000n)
 
 * transient simulation
 .tran 0.1n 400n
