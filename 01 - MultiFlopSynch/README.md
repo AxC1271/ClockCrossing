@@ -166,7 +166,7 @@ plot v(d_latch_1/q_not)
 ```
 Here's the waveform to see the flip flop output being driven by the edge of the clock, not the logic level.
 <p align="center">
-    <img src="./DFFSimulation.png" />
+    <img src="./DFFWaveform.png" />
     <br>
     <em>These waveforms are beautiful. 😍</em>
 </p>
