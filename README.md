@@ -25,7 +25,7 @@ This repository teaches you how to design CDC circuits correctly and verify them
 
 ### Multi-Flop Synchronizers
 <p align="center">
-  <img src="./MultiFlopSynch/TwoFlopSynch.png" />
+  <img src="./01 - MultiFlopSynch/TwoFlopSynch.png" />
 </p>
 
 Multi-flop synchronizers are really easy to implement, cheap to implement in FPGA fabric, and are generally acceptable for most applications. Please go into the subdirectory for further detail.
