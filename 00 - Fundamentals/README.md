@@ -123,6 +123,8 @@ It's not easy to show metastability in SPICE simulations, but you can see that t
 information. At the best case you have metastability issues that can't reliably resolve to the intended bit, and at the
 worst case (as you can see in the diagram), you get wrong data that can cause systems to shut down. 
 
-## MBTF Calculations
+## MTBF Calculations
+The general equation of MTBF (mean time between failures) is defined as the total operating time divided over the number of failures
+that have occurred. 
 
 ## Timing Theory
