@@ -46,7 +46,7 @@ By extension we can now create a positive edge-triggered D flip-flop using two o
 <p align="center">
     <img src="./Images/DFFMagicLayout.png" />
     <br>
-    <em>D Flip-Flop Layout.</em>
+    <em>Figure 2: D Flip-Flop Layout.</em>
 </p>
 
 Here's the SPICE level simulation of that layout using this SPICE directive:
