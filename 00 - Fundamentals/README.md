@@ -1,6 +1,11 @@
 # The Fundamental Basics
 
 ## What is Metastability?
+Metastability is a physical phenomenon that happens in digital systems when signals rest in an undefined intermediary state 
+instead of 1's and 0's. Such signals can resolve unpredictably and cause unwanted oscillations and data corruption. This state
+is often observed in memory circuits, where setup/hold time violations cause an output signal to go metastable, as the feedback loop
+in such circuits don't have enough time to stabilize to the new input, leading to the output being driven by multiple signals with 
+different voltages. 
 
 ## Analog Simulation with Parasitics
 
@@ -111,8 +116,8 @@ Here's the waveform when setup time **is** violated (< 0.78ns):
     <em>Q is completely wrong here and stays low when it should be high. 😱 </em>
 </p>
 
-In most cases, setup/hold time violations only result in corrupted
-bits, not metastability. 
+Here Q does not sample properly because D changes `0.77ns` before the clock edge is set to transition. In an ideal
+flip flop, Q should've been driven high but instead it's driven low because of this setup time violation.
 
 ## MBTF Calculations
 
