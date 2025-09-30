@@ -119,6 +119,25 @@ Here's the waveform when setup time **is** violated (< 0.78ns):
 Here Q does not sample properly because D changes `0.77ns` before the clock edge is set to transition. In an ideal
 flip flop, Q should've been driven high but instead it's driven low because of this setup time violation.
 
+Finding the minimum hold time works in the opposite direction, just how long does D have to be stable after the clock has transitioned.
+Using this SPICE directive:
+```SPICE
+* visual hold time test
+.param thold=0.77n
+
+Vin_clk clk 0 PULSE(0 3.3 100n 0.1n 0.1n 50n 500n)
+Vin_d d_latch_0/d 0 PULSE(0 3.3 {100n+thold} 0.1n 0.1n 200n 500n)
+
+.tran 0.01n 150n
+
+.control
+run
+plot clk xlimit 90n 130n
+plot v(d_latch_0/d) xlimit 90n 130n
+plot v(d_latch_1/q) xlimit 90n 130n
+.endc
+```
+
 It's not easy to show metastability in SPICE simulations, but you can see that time violations can lead to just wrong
 information. At the best case you have metastability issues that can't reliably resolve to the intended bit, and at the
 worst case (as you can see in the diagram), you get wrong data that can cause systems to shut down. 
