@@ -167,7 +167,7 @@ plot v(d_latch_1/q_not)
 .end
 ```
 Here's the waveform to see the flip flop output being driven by the edge of the clock, not the logic level. Notice that D
-changes while the clock is high but Q does not change as it only looks at the state of D during the rising edge.
+changes while the clock is high but Q does not change as it only samples during the rising edge.
 <p align="center">
     <img src="./DFFWaveform.png" />
     <br>
