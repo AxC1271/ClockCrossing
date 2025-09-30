@@ -176,7 +176,7 @@ changes while the clock is high but Q does not change as it only samples during 
 
 ### Setup and Hold Times of D flip-flop
 
-Doing some playing around for the setup time, I was able to identify `0.77ns` as the bare minimum setup time needed
+Doing some playing around for the setup time, I was able to identify `0.78ns` as the bare minimum setup time needed
 between the D input toggling and the clock transitionining in order for the flip flop to sample correctly. Note that setup
 time is the time that D must be stable before the rising clock edge. Here's the spice directive:
 
@@ -197,13 +197,13 @@ plot v(d_latch_1/q) xlimit 90n 130n
 .endc
 ```
 
-Here's the waveform when setup time is not violated (more than 0.77ns):
+Here's the waveform when setup time is not violated (>= 0.78ns):
 <p align="center">
     <img src="./GoodWaveform.png" />
     <em>Q is sampled correctly with the input D as D changes before the rising edge of the clock.</em>
 </p>
 
-Here's the waveform when setup time **is** violated (0.77ns or less):
+Here's the waveform when setup time **is** violated (< 0.78ns):
 <p align="center">
     <img src="./BadWaveform.png" />
     <em>Q is completely wrong here and stays low when it should be high. 😱 </em>
