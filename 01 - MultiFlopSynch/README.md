@@ -130,8 +130,12 @@ plot Q_not
 
 .end
 ```
+Let's now look at the waveform and verify that it indeed works as a D-latch before we make our D flip-flop. 
+
 <p align="center">
     <img src="./DLatchSimulation.png" />
+    <br>
+    <em>D Latch Simulation with Correct Outputs.</em>
 </p>
 
 ### Metastability of D flip-flop
