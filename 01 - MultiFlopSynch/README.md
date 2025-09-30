@@ -138,6 +138,13 @@ Let's now look at the waveform and verify that it indeed works as a D-latch befo
     <em>This looks correct!</em>
 </p>
 
+By extension we can now create a positive edge-triggered D flip-flop using two of those latches that we just made and two inverters (technically you can get away with using just one inverter for the master D-latch):
+<p align="center">
+    <img src="./DFFMagicLayout.png" />
+    <br>
+    <em>D Flip-Flop Layout.</em>
+</p>
+
 ### Metastability of D flip-flop
 
 ## Advantages/Disadvantages
