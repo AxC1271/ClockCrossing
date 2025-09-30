@@ -145,6 +145,17 @@ By extension we can now create a positive edge-triggered D flip-flop using two o
     <em>D Flip-Flop Layout.</em>
 </p>
 
+Here's the SPICE level simulation of that layout using this SPICE directive:
+```SPICE
+
+```
+
+<p align="center">
+    <img src="./DFFSimulation.png" />
+    <br>
+    <em>These waveforms are beautiful.</em>
+</p>
+
 ### Metastability of D flip-flop
 
 ## Advantages/Disadvantages
