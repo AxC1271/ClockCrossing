@@ -135,7 +135,7 @@ Let's now look at the waveform and verify that it indeed works as a D-latch befo
 <p align="center">
     <img src="./DLatchSimulation.png" />
     <br>
-    <em>D Latch Simulation with Correct Outputs.</em>
+    <em>This looks correct!</em>
 </p>
 
 ### Metastability of D flip-flop
