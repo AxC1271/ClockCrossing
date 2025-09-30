@@ -174,7 +174,40 @@ changes while the clock is high but Q does not change as it only samples during 
     <em>These waveforms are beautiful. 😍</em>
 </p>
 
-### Metastability of D flip-flop
+### Setup and Hold Times of D flip-flop
+
+Doing some playing around for the setup time, I was able to identify `0.77ns` as the bare minimum setup time needed
+between the D input toggling and the clock transitionining in order for the flip flop to sample correctly. Note that setup
+time is the time that D must be stable before the rising clock edge. Here's the spice directive:
+
+```SPICE
+* visual setup time test
+.param tsetup=0.77n
+
+Vin_clk clk 0 PULSE(0 3.3 100n 0.1n 0.1n 50n 500n)
+Vin_d d_latch_0/d 0 PULSE(0 3.3 {100n-tsetup} 0.1n 0.1n 200n 500n)
+
+.tran 0.01n 150n
+
+.control
+run
+plot clk xlimit 90n 130n
+plot v(d_latch_0/d) xlimit 90n 130n
+plot v(d_latch_1/q) xlimit 90n 130n
+.endc
+```
+
+Here's the waveform when setup time is not violated (more than 0.77ns):
+<p align="center">
+    <img src="./GoodWaveform.png" />
+    <em>Q is sampled correctly with the input D as D changes before the rising edge of the clock.</em>
+</p>
+
+Here's the waveform when setup time **is** violated (0.77ns or less):
+<p align="center">
+    <img src="./BadWaveform.png" />
+    <em>Q is completely wrong here and stays low when it should be high. 😱 </em>
+</p>
 
 ## Advantages/Disadvantages
 A multi-flop synchronizer sounds like an easy solution to solving metastability issues; adding an additional flop to the end of the first flop statistically allows for enough time for the metastable signal to settle before being sampled again by the second flip flop, only requiring an additional clock cycle. It's very simple to implement, very inexpensive in FPGA fabric (due to only using 2 flip flops), and has predictable latency. However, there are drawbacks as well:
