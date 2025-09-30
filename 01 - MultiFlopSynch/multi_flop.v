@@ -6,7 +6,7 @@
 // Create Date: 09/27/2025 05:43:01 PM
 // Design Name: Multi Flop Synchronizer
 // Module Name: multi_flop
-// Project Name: Metastable Github Educational Demo
+// Project Name: CDC-Guide Github Educational Demo
 // Target Devices: 
 // Tool Versions: Xilinx Vivado 2024.2
 // Description: 
