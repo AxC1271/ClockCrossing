@@ -164,7 +164,8 @@ Here's the waveform when setup time **is** violated (< 0.78ns):
     <em>Q is completely wrong here and stays low when it should be high. 😱 </em>
 </p>
 
-This is the core issue that we are trying to solve! Let's see how we can fix this with a double flop synchronizer now.
+This is the core issue that we are trying to solve! We lost a bit because setup time 
+was violated. Let's see how we can fix this with a double flop synchronizer now.
 
 ## Advantages/Disadvantages
 A multi-flop synchronizer sounds like an easy solution to solving metastability issues; adding an additional flop to the end of the first flop statistically allows for enough time for the metastable signal to settle before being sampled again by the second flip flop, only requiring an additional clock cycle. It's very simple to implement, very inexpensive in FPGA fabric (due to only using 2 flip flops), and has predictable latency. However, there are drawbacks as well:
