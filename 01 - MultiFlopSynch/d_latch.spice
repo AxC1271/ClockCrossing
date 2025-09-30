@@ -56,13 +56,27 @@ C14 nand_gate_0/gnd Gnd 2.39fF
 C15 nand_gate_0/vdd Gnd 3.13fF
 C16 nand_gate_0/w_n6_n6# Gnd 3.89fF
 
-Vin_d d 0 PULSE(0 1.8 1n 0.1n 0.1n 10n 20n)
-Vin_en en 0 PULSE(0 1.8 0n 0.1n 0.1n 40n 80n)
+.global Vpower gnd
+Vvdd0 nand_gate_0/vdd Vpower 0
+Vvdd1 nand_gate_1/vdd Vpower 0
+Vvdd2 nand_gate_2/vdd Vpower 0
+Vvdd3 nand_gate_3/vdd Vpower 0
+
+Vgnd0 nand_gate_0/gnd gnd 0
+Vgnd1 nand_gate_1/gnd gnd 0
+Vgnd2 nand_gate_2/gnd gnd 0
+Vgnd3 nand_gate_3/gnd gnd 0
+
+Vin_d d 0 PULSE(0 3.3 1n 0.1n 0.1n 10n 20n)
+Vin_en en 0 PULSE(0 3.3 0n 0.1n 0.1n 40n 80n)
 
 .tran 0.1n 200n
 .control
 run
-plot d en Q Q_not
+plot d
+plot en
+plot Q
+plot Q_not
 .endc
 
 .end
