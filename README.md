@@ -1,6 +1,6 @@
 # 🎮 Clock Crossing
 
-*A friendly neighborhood guide to safely crossing between clock domains*
+*A friendly neighborhood guide to safely crossing between clock domains!*
 
 Welcome to Clock Crossing! This is a place where multiple clocks live in harmony (mostly), and signals learn to cross domain boundaries without causing metastability chaos.
 
