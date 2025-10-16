@@ -1,4 +1,4 @@
-# Clock Domain Crossing Simplified
+# Clock Crossing
 
 ## Abstract
 This GitHub repository explores the concept of clock domain crossing using different techniques, from multi-flop synchronizers to 
