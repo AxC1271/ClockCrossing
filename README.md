@@ -1,4 +1,7 @@
 # 🎮 Clock Crossing
+<p align="center">
+  <img src="./ClockCrossing.png" />
+</p>
 
 *A friendly neighborhood guide to safely crossing between clock domains!*
 
