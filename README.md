@@ -1,6 +1,6 @@
 # 🎮 Clock Crossing
 <p align="center">
-  <img src="./ClockCrossing.png" />
+  <img src="./ClockCrossing.png" height=600px />
 </p>
 
 *A friendly neighborhood guide to safely crossing between clock domains!*
