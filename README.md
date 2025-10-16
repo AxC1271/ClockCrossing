@@ -113,7 +113,7 @@ By exploring Clock Crossing, you'll understand:
 - ✅ **Industry best practices** for multi-clock designs
 - ✅ **Common mistakes** and how to avoid them
 
-**Bonus:** Many of these synchronizers connect to my [Cell Museum](link) project—the flip-flops and gates used here are the same ones I designed at the transistor level!
+**Bonus:** Many of these synchronizers connect to my [Cell Museum](https://github.com/AxC1271/CellMuseum) project—the flip-flops and gates used here are the same ones I designed at the transistor level!
 
 ---
 
