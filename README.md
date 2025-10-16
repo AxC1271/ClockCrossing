@@ -159,20 +159,6 @@ Whether you're in the fast-lane GHz club or the slow-and-steady KHz crowd, there
 
 ---
 
-## 📬 Visitor Feedback
-
-Found a bug? Have a synchronizer technique I missed? Want to share your CDC horror story? 
-
-Open an issue or submit a PR—this is a living guide that improves with community input!
-
----
-
-## 📝 License
-
-Open source and free for learning! If these synchronizers save your silicon, attribution is appreciated. 
-
----
-
 **Built with careful timing analysis ⏰ at Case Western Reserve University**
 
 *P.S. - No flip-flops were harmed in the making of this repository (though a few entered metastable states temporarily).*
