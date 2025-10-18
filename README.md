@@ -3,11 +3,9 @@
   <img src="./ClockCrossing.png" height=400px />
 </p>
 
-*A friendly neighborhood guide to safely crossing between clock domains!*
-
-Welcome to Clock Crossing! This is a place where multiple clocks live in harmony (mostly), and signals learn to cross domain boundaries without causing metastability chaos.
-
-Whether you're a visiting engineer or a longtime resident of asynchronous design, this guide will help you navigate the sometimes tricky world of Clock Domain Crossings (CDC).
+Welcome to my GitHub repository Clock Crossing! This is a place where multiple clocks live in harmony (mostly), and signals learn to cross domain boundaries without causing 
+metastability chaos. Whether you're a visiting engineer or a longtime resident of asynchronous design, this guide will help you navigate the sometimes 
+tricky world of Clock Domain Crossings (CDC).
 
 ---
 
