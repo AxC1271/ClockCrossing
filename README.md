@@ -142,7 +142,7 @@ Every synchronizer directory includes a:
 ## 🔗 Related Projects
 
 - **[Cell Museum](https://github.com/AxC1271/CellMuseum)** - The transistor-level building blocks used in these synchronizers
-- **[RISC-V Processor](https://github.com/AxC1271/RISCVProcessor)** - My processor design that motivated learning CDC
+- **[RISC-V Processor](https://github.com/AxC1271/RISC-VProcessor)** - My processor design that motivated learning CDC
 
 ---
 
