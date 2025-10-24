@@ -3,15 +3,13 @@
   <img src="./ClockCrossing.png" height=400px />
 </p>
 
-Welcome to my GitHub repository Clock Crossing! This is a place where multiple clocks live in harmony (mostly), and signals learn to cross domain boundaries without causing 
-metastability chaos. Whether you're a visiting engineer or a longtime resident of asynchronous design, this guide will help you navigate the sometimes 
-tricky world of Clock Domain Crossings (CDC).
+Welcome to my GitHub repository Clock Crossing! This is a place where multiple clocks live in harmony (mostly), and signals learn to cross domain boundaries without causing metastability chaos. Whether you're a visiting engineer or a longtime resident of asynchronous design, this guide will help you navigate the crazy world of clock domain crossings.
 
 ---
 
 ## 🌊 Why Clock Crossing Matters
 
-Modern digital systems are like bustling cities with different time zones. Your processor runs at 3GHz, your memory at 800MHz, your USB controller at 480MHz—all living together on the same chip. When signals travel between these "time zones," **bad things can happen**.
+Modern digital systems are like bustling cities with different time zones. Your processor runs at 3GHz, your memory at 800MHz, your USB controller at 480MHz—all living together on the same chip. When signals travel between these "time zones," **bad things can happen**. In real life, unchecked errors in large semiconductor companies can suck up millions of dollars on chips that don't work.
 
 ### ⚠️ The Metastability Problem
 
@@ -28,7 +26,6 @@ When a signal crosses between clock domains at *just* the wrong moment, a flip-f
 - 💰 Catastrophic in production silicon
 - ✅ **Completely preventable** with proper synchronizers
 
-**That's where this guide comes in.**
 
 ---
 
@@ -122,7 +119,7 @@ Each synchronizer is a different "neighbor" in Clock Crossing, with its own pers
 Every synchronizer directory includes a:
 
 - 📐 **Schematic** - Clear block diagrams of the digital gates 
-- 💻 **Verilog/SystemVerilog** - Synthesizable RTL code written in Verilog
+- 💻 **Verilog Code** - Synthesizable RTL code written in Verilog
 - ⚡ **SPICE Simulation** - Transistor-level validation with parasitics
 - 📊 **Waveforms** - Simulation results showing correct operation
 - 📝 **Documentation** - When to use it, how it works, common pitfalls
@@ -144,9 +141,8 @@ Every synchronizer directory includes a:
 
 ## 🔗 Related Projects
 
-- **[Cell Museum](link)** - The transistor-level building blocks used in these synchronizers
-- **[RISC-V Processor](link)** - My processor design that motivated learning CDC
-- **[Tiny Tapeout Submission](link)** - Testing CDC synchronizers on real silicon
+- **[Cell Museum](https://github.com/AxC1271/CellMuseum)** - The transistor-level building blocks used in these synchronizers
+- **[RISC-V Processor](https://github.com/AxC1271/RISCVProcessor)** - My processor design that motivated learning CDC
 
 ---
 
