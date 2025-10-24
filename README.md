@@ -38,30 +38,55 @@ Each synchronizer is a different "neighbor" in Clock Crossing, with its own pers
 
 ### 🤝 [Handshake Synchronizer](./handshake/) 
 *The friendly neighbor who always confirms receipt*
+
+<p align="center">
+  <img src="./07 - Handshaking/Handshake.png" width="600"/>
+</p>
+
 - **Best for:** Single-bit control signals, no data loss allowed
 - **Personality:** Reliable but chatty (takes time to acknowledge)
 - **Use case:** Starting/stopping modules, sending commands
 
 ### 🔄 [Toggle Synchronizer](./toggle/)
 *Always flipping out (literally)*
+
+<p align="center">
+  <img src="./02 - ToggleSynch/ToggleSynch.png" width="600"/>
+</p>
+
 - **Best for:** Pulses that need to cross domains
 - **Personality:** Energetic, never misses a beat
 - **Use case:** Interrupt signals, event notifications
 
 ### 📬 [FIFO Synchronizer](./async-fifo/)
 *The reliable mailbox*
+
+<p align="center">
+  <img src="./06 - AsynchFIFO/AsynchFIFO.png" width="600"/>
+</p>
+
 - **Best for:** Multi-bit data, burst transfers
 - **Personality:** Organized, handles lots of traffic
 - **Use case:** Streaming data between clock domains
 
 ### 🔀 [MUX Synchronizer](./mux-recirc/)
 *The quick decision maker*
+
+<p align="center">
+  <img src="./03 - MuxSynch/MuxSynch.png" width="600"/>
+</p>
+
 - **Best for:** Fast single-bit control signals
 - **Personality:** Efficient, makes quick choices
 - **Use case:** Select signals, enables
 
 ### 🌊 [Pulse Synchronizer](./pulse/)
 *The town crier*
+
+<p align="center">
+  <img src="./04 - PulseSynch/PulseSynch.png" width="600"/>
+</p>
+
 - **Best for:** Short pulses that need to propagate
 - **Personality:** Loud and clear, one message at a time
 - **Use case:** Triggering events, one-shot signals
@@ -81,37 +106,26 @@ Each synchronizer is a different "neighbor" in Clock Crossing, with its own pers
 
 ### 🎨 [Gray Code Counters](./gray-code/)
 *The mathematician*
+
+<p align="center">
+  <img src="./05 - GrayCodeCounters/GrayCode.png" width="600"/>
+</p>
+
 - **Best for:** Counter values crossing domains
 - **Personality:** Precise, changes one bit at a time
 - **Use case:** FIFO pointers, address synchronization
 
 ---
 
-## 📚 What's in Each Exhibit?
+## 📚 What is Provided in Each Exhibit?
 
-Every synchronizer directory includes:
+Every synchronizer directory includes a:
 
-- 📐 **Schematic** - Clear block diagrams showing how it works
-- 💻 **Verilog/SystemVerilog** - Synthesizable RTL code
-- 🎨 **Magic VLSI Layout** - Physical implementation (where applicable)
+- 📐 **Schematic** - Clear block diagrams of the digital gates 
+- 💻 **Verilog/SystemVerilog** - Synthesizable RTL code written in Verilog
 - ⚡ **SPICE Simulation** - Transistor-level validation with parasitics
 - 📊 **Waveforms** - Simulation results showing correct operation
 - 📝 **Documentation** - When to use it, how it works, common pitfalls
-
----
-
-## 🎓 What You'll Learn
-
-By exploring Clock Crossing, you'll understand:
-
-- ✅ **Why metastability happens** and why you can't just "simulate it away"
-- ✅ **When to use each synchronizer type** (they're not interchangeable!)
-- ✅ **How to calculate MTBF** (Mean Time Between Failures)
-- ✅ **Verification strategies** for CDC logic
-- ✅ **Industry best practices** for multi-clock designs
-- ✅ **Common mistakes** and how to avoid them
-
-**Bonus:** Many of these synchronizers connect to my [Cell Museum](https://github.com/AxC1271/CellMuseum) project—the flip-flops and gates used here are the same ones I designed at the transistor level!
 
 ---
 
@@ -125,19 +139,6 @@ By exploring Clock Crossing, you'll understand:
 **Already know CDC?** Jump to:
 - [Gray Code Counters](./gray-code/) - Advanced pointer synchronization
 - [MUX Synchronizer](./mux-recirc/) - High-performance alternatives
-
----
-
-## 🎯 Why I Built This
-
-After designing a RISC-V processor and working on multi-clock systems, I realized CDC is one of those topics that's:
-- Critical for real chip design
-- Poorly explained in most textbooks
-- **Impossible to fully validate in simulation**
-
-So I created Clock Crossing as both a learning tool for myself and a resource for anyone else navigating the wild world of asynchronous design.
-
-**Future plans:** I'm working on a [Tiny Tapeout](link) submission to validate some of these synchronizers on actual silicon—because you can't truly test metastability in simulation!
 
 ---
 
